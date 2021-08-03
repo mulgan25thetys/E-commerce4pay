@@ -1,14 +1,38 @@
 security:
+    encoders:
+        App\Entity\User:
+            algorithm: auto
+
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        users_in_memory: { memory: null }
+        app_useruprovider:
+            entity:
+                class: App\Entity\User
+                property: username
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: lazy
-            provider: users_in_memory
+            entry_point: App\Security\AuthenticationEntryPoint
+            anonymous: true
+            user_checker: App\Core\Auth\Security\UserChecker
+            switch_user: { role: CAN_SWITCH_USER, parameter: _ninja }
+            guard:
+                authenticators:
+                    - App\Core\Auth\Authenticator
+            logout:
+                path: auth_logout
+            remember_me:
+                secret: '%kernel.secret%'
+                lifetime: 604800 # 1 week in seconds
+                path: /
+                samesite: strict
+            access_denied_handler: App\Security\AccessDeniedHandler
+                # activate different ways to authenticate
+                # https://symfony.com/doc/current/security.html#firewalls-authentication
+                # https://symfony.com/doc/current/security/impersonating_user.html
+                # switch_user: true
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
