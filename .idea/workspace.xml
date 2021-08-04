@@ -2,114 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98428927-4f0b-4f9b-87ad-65f339a6dfe9" name="Default Changelist" comment="index modifier depuis mulgan dev">
-      <change afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/controllers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/controllers/hello_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/all.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/brands.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/brands.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/fontawesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/fontawesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/regular.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/regular.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/solid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/solid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/svg-with-js.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/svg-with-js.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/v4-shims.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/css/v4-shims.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/icheck-bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/icheck-bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/assets.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/messenger.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/api_platform.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210731093919.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/AbstractController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/PasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Authenticator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Event/BadPassWordLoginEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Event/UserBannedEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Event/UserCreatedEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Exception/TooManyBadCredentialsException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Exception/UserBannedException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Exception/UserNotFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Repository/LoginAttemptRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Security/UserChecker.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Service/AuthService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Service/LoginAttemptService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Service/UserBanService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Subscriber/LoginSubscriber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/Subscriber/PasswordResetSubscriber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Auth/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Password/Data/PasswordResetConfirmData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Password/Data/PasswordResetRequestData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Password/Event/PasswordRecoveredEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Password/Event/PasswordResetTokenCreatedEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Password/Exception/OngoingPasswordResetException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Password/Exception/TokenExpiredException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Password/Form/PasswordResetConfirmForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Password/Form/PasswordResetRequestForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Password/Repository/PasswordResetTokenRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Password/Service/PasswordService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Password/Service/TokenGeneratorService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/LoginAttempt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/PasswordResetToken.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Orm/AbstractRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Orm/CleanableRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Orm/IterableQueryBuilder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Queue/Message/ServiceMethodMessage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/AccessDeniedHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/AuthenticationEntryPoint.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/auth/login.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/auth/password_reset.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/auth/password_reset_confirm.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/content.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/footer.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/navbar.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/produit/liste.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/sidebar.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/security.fr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/adminlte.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/adminlte.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/adminlte.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/adminlte.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/jquery/jquery.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/jquery/jquery.slim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/jquery/jquery.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/jquery/jquery.slim.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/pages/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/DashboardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dashboard.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/produit/liste.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/liste.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sidebar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sidebar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +229,8 @@
       <workItem from="1627830394722" duration="6004000" />
       <workItem from="1627928994165" duration="2048000" />
       <workItem from="1627931571660" duration="6234000" />
-      <workItem from="1627982270050" duration="19696000" />
+      <workItem from="1627982270050" duration="21775000" />
+      <workItem from="1628094673396" duration="4912000" />
     </task>
     <task id="LOCAL-00001" summary="index modifier depuis mulgan dev">
       <created>1627580687859</created>

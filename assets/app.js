@@ -13,3 +13,7 @@ import './styles/css/fontawesome.css'
 
 // start the Stimulus application
 import './bootstrap';
+import './js/adminlte.js';
+import './js/demo.js';
+import './js/pages/dashboard.js';
+import './js/jquery/jquery.min.js';
