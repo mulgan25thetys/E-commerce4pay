@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% set bodyClass = 'light' %}
+{% block title 'Application Web de vente des Animaux et Utilitaires' %}
+{% block body %}
+<main class="homepage">
+
+    <section class="container">
+        <div class="home-intro">
+            <div class="home-intro__body stack">
+                <div class="hero-title">
+                    <strong>Achetez</strong><br>
+                    en toute <br>
+                    Securite.
+                </div>
+                <p class="hero-text">
+                   ici un mechant slider et autres objet du disign relatif a la <strong> publicité</strong>
+                </p>
+                <div class="hstack">
+                    {% if app.user %}
+                        <a class="btn-primary btn-big" href="{{ path('user_profil') }}">Voir mon profil</a>
+                    {% else %}
+                        <a class="btn-primary btn-big" href="#">Créer votre compte</a>
+                    {% endif %}
+                    <a href="{{ path('animal_index') }}" class="btn-primary-outlined btn-big">Voir les videos explicatives</a>
+                </div>
+            </div>
+            <div class="home-intro__illustration">
+                <img src="{{ asset('images/racoon.svg') }}" alt="image" width="366" class="home-intro__mascot">
+            </div>
+        </div>
+    </section>
+
+    {% if animals | length > 0 %}
+        <section class="home-push container">
+            <div class="home-push__body stack">
+                <h2 class="hero-title">faites le choix ideal <strong>plusieurs formats</strong></h2>
+                <p class="hero-text">
+                    Vous cherchez un animal de compagni ou encore des ustensiles pour votres animal?
+                   faites nous confiance, regardez des models et example t'utilisation.
+                    Vous devriez trouver votre bonheur
+                </p>
+                {#
+                <div>
+                  <a class="btn-primary-outlined btn-big" href="{{ path('course_index') }}">Découvrir les derniers tutoriels</a>
+                </div>
+                #}
+            </div>
+            <div class="home-push__mosaic">
+
+                <div class="card card-big">
+                    <a class="pill pill-yellow" href="{{ path('animal_index') }}">Les dernières playlists</a>
+                    <div class="home-list stack-separated">
+                        {% for playlist in playlists %}
+                            <div class="home-list__item has-icon">
+
+                                <a class="card__title" href="{{ path(playlist) }}">{{ playlist.title }}</a>
+                                <div>{{ playlist.animalsCount }} videos</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="card card-big">
+                    <a class="pill" href="{{ path('course_index') }}">Les produits recents</a>
+                    <div class="home-list stack-separated">
+                        {% for produit in produits %}
+                            <div class="home-list__item has-icon">
+                                    <a href="#" class="product__icon" tabindex="-1">
+                                        <img src="{{ uploads_path('icons/' ~ product.image) }}" alt="">
+                                    </a>
+
+                                <a class="card__title" href="{{ path(product) }}">{{ product.title }}</a>
+                                <div>{{ product.price |format_currency('EUR')}}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    {% endif %}
+
+    {% if posts | length > 0 %}
+        <section class="home-blog container">
+            <div class="col">
+                <div class="home-blog__body stack">
+                    <h1 class="hero-title">lL'actualité en continue</h1>
+                    <div class="hero-text formatted">
+                        Venez découvrir les actualités autour de l'univers environnementale et animal.
+                    </div>
+                    <div class="mt1 mb3">
+                        <a class="btn-primary-outlined btn-big" href="{{ path('blog_index') }}">Accéder au blog</a>
+                    </div>
+                    {% set post = posts[0] %}
+                    {% include 'pages/_homepost.twig' with {width: 385, height: 182, post: posts[0]} %}
+                </div>
+            </div>
+            <div class="col">
+                {% include 'pages/_homepost.twig' with {width: 385, height: 465, post: posts[1]} %}
+            </div>
+            <div class="col stack-separated">
+                {% for post in posts | slice(2, 3) %}
+                    {% include 'pages/_homepost.twig' with {width: 97, height: 93} %}
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+</main>
+{% endblock %}

@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Entity;
+
+use App\Entity\Content;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass="App\Core\Blog\Repository\PostRepository")
+ * @ORM\Table("blog_post")
+ */
+class Post extends Content
+{
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="posts")
+     * @ORM\JoinColumn(onDelete="SET NULL")
+     */
+    private ?Category $category = null;
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    public function hasVideo(): bool
+    {
+        if (null !== $this->getContent()) {
+            return 1 === preg_match('/^[^\s]*youtube.com/mi', $this->getContent());
+        }
+
+        return false;
+    }
+}
