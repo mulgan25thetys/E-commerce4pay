@@ -2,18 +2,80 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
+        <title>{% block title 'ThereseApp' %} | ThereseApp</title>
+
         {% block stylesheets %}
             {#{{ encore_entry_link_tags('app') }}#}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
+        <meta name="turbolinks-cache-control" content="no-cache"/>
+        {# {{ url('rss') }} #}
+        <link rel="alternate" type="application/rss+xml" title="ThereseApp.com | Flux" href="#"/>
+        <link rel="apple-touch-icon" sizes="128x128" href="/favicons/Logo.png">
+        {% block meta '' -%}
+        <meta property="og:title" content="{{ block('title') }}"/>
+        <meta property="og:site_name" content="ThereseApp.com"/>
+        <meta property="og:language" content="fr"/>
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body
+    class="{{ bodyClass is defined ? bodyClass : 'non_definie' }} {{ body_theme() }} {{ app.user and app.user.premium ? 'user-premium' : 'user-not-premium' }}">
+    <div class="page-wrapper">
+        <nav class="header {% if headerWhite is defined %}is-white{% endif %}" id="header">
+            <ul class="header-nav">
+                <li class="header__home">
+                    <a href="{{ path('home') }}" {{ menu_active('home') }} title="Accueil">
+                        {{ icon('logo') }}
+                    </a>
+                </li>
+                <li><a href="{{ path('product_index') }}" {{ menu_active('product') }}>{{ icon('cursus') }} Product</a></li>
+                <li><a href="{{ path('animal_index') }}" {{ menu_active('animal') }}>{{ icon('video') }} Animal</a></li>
+                <li><a href="{{ path('playlist_index') }}" {{ menu_active('playlist') }}>{{ icon('video') }} Playlist</a></li>
+                <li><a href="{{ path('blog_index') }}" {{ menu_active('blog') }}>{{ icon('pen') }} Blog</a></li>
+            </ul>
+            {% include 'partials/header-side.html.twig' %}
+        </nav>
+        <div class="header-placeholder"></div>
+
+            {% block body %}{% endblock %}
+        <footer class="footer">
+            <div>
+                <div class="footer-title">Nous retrouver</div>
+                <p class="text-muted mb2">
+                    "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                    "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."                </p>
+                <div class="flex">
+                    {% include 'partials/social.html.twig' %}
+
+                </div>
+            </div>
+
+            <div>
+                <a class="footer-title" href="">Mes derniers posts sur les reseaux</a>
+                <div class="footer-tweets">
+                    {% for tweet in last_tweets() %}
+                        <div class="footer-tweet">
+                            {{ icon('quotes') }}
+                            {{ tweet.content | autolink | raw }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div>
+                <div class="footer-title">Suivez nous</div>
+                <ul>
+                    <li><a href="{{ path('contact') }}">{{ icon('email') }} Par email</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCdbxx0HEBVt4mY7Djr4Y4Xg">{{ icon('video') }} Chaine youtube</a></li>
+                    <li><a href="{{ path('env') }}">{{ icon('info') }} A propos de nous</a></li>
+                    <li><a href="{{ path('confidentialite') }}">{{ icon('fingerprint') }} Politique de confidentialité</a></li>
+                </ul>
+                <div class="footer-title mt3 mb1">Thème</div>
+                <theme-switcher></theme-switcher>
+            </div>
+        </footer>
+    </div> {# fin de la page #}
     </body>
 </html>
